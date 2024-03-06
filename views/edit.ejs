@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <%=title %>
+    </h1>
+
+    <form action="/aksi-edit" method="post">
+        <input type="text" name="id" value="<%=dataEdit.id %>">
+        <br>
+        <label for="">Nama</label>
+        <br>
+        <input type="text" name="nama" value="<%=dataEdit.nama %>">
+
+        <br>
+        <label for="">NIM</label>
+        <br>
+        <input type="text" name="nim" value="<%=dataEdit.nim %>">
+        <br>
+        <label for="">Angkatan</label>
+        <br>
+        <input type="text" name="angkatan" value="<%=dataEdit.angkatan %>">
+        <br>
+        <label for="">Kelas</label>
+        <br>
+        <input type="text" name="kelas" value="<%=dataEdit.kelas %>">
+        <br>
+        <br>
+        <button type="submit">Edit</button>
+    </form>
+</body>
+
+</html>
