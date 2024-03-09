@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Halaman Utama</title>
-</head>
+  </head>
 
-<body>
-    <h1>
-        <%=title %>
-    </h1>
-    <button style="margin-bottom: 20px;"><a href="/halaman-tambah">Tambah Data</a></button>
+  <body>
+    <h1><%=title %></h1>
+    <p><%=alert %></p>
+    <button style="margin-bottom: 20px">
+      <a href="/halaman-tambah">Tambah Data</a>
+    </button>
+    <p style="color: blue"><%=alert %></p>
+    <p style="color: rgb(185, 27, 27)"><%=alertHapus %></p>
+    <p style="color: rgb(167, 247, 92)"><%=alertEdit %></p>
 
     <table border="1">
-        <thead>
-            <th>Nama</th>
-            <th>NIM</th>
-            <th>Angkatan</th>
-            <th>Kelas</th>
-            <th>Aksi</th>
-        </thead>
-        <tbody>
-            <% dataMahasiswa.forEach(dtm=> { %>
-                <tr>
-                    <td>
-                        <%= dtm.nama%>
-                    </td>
-                    <td>
-                        <%= dtm.nim%>
-                    </td>
-                    <td>
-                        <%= dtm.angkatan%>
-                    </td>
-                    <td>
-                        <%= dtm.kelas%>
-                    </td>
-                    <td>
-                        <a href="/halaman-edit/<%=dtm.id %>">Edit</a>
-                        <a href="/aksi-hapus/<%=dtm.id %>">Hapus</a>
-                    </td>
-                </tr>
-                <% }) %>
-        </tbody>
+      <thead>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Angkatan</th>
+        <th>Kelas</th>
+        <th>Aksi</th>
+      </thead>
+      <tbody>
+        <% dataMahasiswa.forEach(dtm=> { %>
+        <tr>
+          <td><%= dtm.nama%></td>
+          <td><%= dtm.nim%></td>
+          <td><%= dtm.angkatan%></td>
+          <td><%= dtm.kelas%></td>
+          <td>
+            <a href="/halaman-edit/<%=dtm.id %>">Edit</a>
+            <a href="/aksi-hapus/<%=dtm.id %>">Hapus</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
     </table>
-
-</body>
-
+  </body>
 </html>
